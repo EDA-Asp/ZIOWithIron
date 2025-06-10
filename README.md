@@ -16,17 +16,17 @@ We model restrictions for valueObject via refined types.
 
 \- We steel need to have persistent layer separately. So we can provide db codecs or make a record for persistence with primitive types and cast in back in unsafe way
 
-
 For integration test use testcontainers.
 
-
+For manual run, first set up db.
 
 
 ```bash
   docker compose run -d
 ```
 
-## Correct request 
+Then you can make requests like:
+
 ```bash
   curl -X POST -H "Content-Type: application/json" -d '{"name": "JohnDoe", "age": 15}' http://localhost:8080/users
 ```
